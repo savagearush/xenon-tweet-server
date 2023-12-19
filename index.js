@@ -30,6 +30,10 @@ app.use("/user", User);
 // Start MongoDB Server
 startdb();
 
+app.get("/check", (req, res) => {
+  res.status(200).send("Server is working");
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
